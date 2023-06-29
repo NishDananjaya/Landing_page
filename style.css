@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Exo', sans-serif;
+    justify-content: center;
+    background: url(cool-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    position: relative;
+    width: 400px;
+    background: white;
+    padding: 60px 40px;
+}
+header{
+    font-size: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.inputfield, form .button{
+    margin: 25px 0;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+.inputfield input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid silver;
+    text-align: center;
+    font-size: 19px;
+    transition: 0.4s;
+}
+input:focus{
+    border: 3px solid #1da1f2;
+}
+.inputfield label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: 0.4s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    transform: translateY(-33px);
+    background: white;
+    font-size: 16px;
+    color: #1da1f2;
+}
+form .button{
+    margin-top: 30px;
+    overflow: hidden;
+    z-index: 111;
+}
+.button .inner{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    z-index: -1;
+    transition: all 0.4s;
+    background: -webkit-linear-gradient(right,#00dbde,#fc00ff,#00dbde,#fc00ff);
+}
+.button:hover .inner{
+    left: 0;
+}
+.button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container .auth{
+    margin: 35px 0 20px 0;
+    font-size: 19px;
+    color: grey;
+    text-align: center;
+}
+.links{
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+.facebook, .google{
+    height: 40px;
+    width: 100%;
+    border: 3px solid silver;
+    border-radius: 20px;
+    margin: 0 10px;
+    padding: 5px 5px 5px 15px;
+    transition: 0.4s;
+   
+}
+
+.facebook:hover{
+    border: 3px solid #4267b2;
+    
+}
+.google:hover{
+    border: 3px solid #dd4b39;
+}
+
+.facebook ion-icon, .facebook span{
+    color: #4267b2;
+}
+.google ion-icon, .google span{
+    color: #dd4b39;
+}
+.links ion-icon{
+    font-size: 23px;
+    line-height: 40px;
+    margin-left: -90px;
+}
+.links span{
+    position: absolute;
+    font-size: 17px;
+    font-weight: bolder;
+    padding-top: 1px;
+    padding-left: 8px;
+    font-family: "Open Sans",sans-serif;
+}
+.signup{
+    margin-top: 50px;
+    text-align: center;
+}
+.signup a{
+    color: #3498db;
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
